@@ -9,11 +9,8 @@ def isfloat(value):
   except ValueError:
     return False
 def lengthoffile(filepath):
-	count = 0
-	with open(filepath, "r") as filestream:
-		for line in filestream:
-			count += 1
-	return count
+	num_lines = sum(1 for line in open(filepath))
+	return num_lines
 
 def getpatid(filepath):
 	count = 0
@@ -26,6 +23,7 @@ def getpatid(filepath):
 	return pat_id
 
 store = []
+#This is the name you change
 filepath = 'raw.csv'
 #lenoffil = 7302818
 lenoffil = lengthoffile(filepath)
@@ -39,9 +37,5 @@ for i,line in enumerate(f):
 f.close()
 
 out = np.array(store)
-data = np.sort(out[1:])
+np.save("data", out)
 
-
-
-
-#_data = data[:,[2]+list(range(11,21))]
