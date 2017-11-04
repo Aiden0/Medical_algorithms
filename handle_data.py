@@ -31,7 +31,7 @@ lenoffil = lengthoffile(filepath)
 idx = [2]+list(range(11,21))
 f = open(filepath, "r") 
 for i,line in enumerate(f):
-	currentline = line.split(",")
+	currentline = line[:-1].split(",")
 	store.append([float(currentline[i]) if isfloat(currentline[i]) else np.nan for i in idx])
 	print("{} %".format(round((i/lenoffil)*100,2)),end="\r")
 f.close()
