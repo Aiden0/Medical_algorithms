@@ -35,7 +35,7 @@ f = open(filepath, "r")
 for i,line in enumerate(f):
 	currentline = line.split(",")
 	store.append([float(currentline[i]) if isfloat(currentline[i]) else np.nan for i in idx])
-	print("{} %".format(round((i/7302818)*100,2)),end="\r")
+	print("{} %".format(round((i/lenoffil)*100,2)),end="\r")
 f.close()
 
 out = np.array(store)
