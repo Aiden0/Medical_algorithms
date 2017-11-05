@@ -87,10 +87,10 @@ cut_hrv_times.append(hrv_days[idx[-1]:])
 cut_hrv_dat.append(hrv_dat[idx[-1]:])
 
 
-np.save("hrv_times",cut_hrv_times)
-np.save("hrv_dat",cut_hrv_dat)
-np.save("ppg_times",cut_ppg_times)
-np.save("ppg_dat",cut_ppg_dat)
+np.save("data/hrv_times",cut_hrv_times)
+np.save("data/hrv_dat",cut_hrv_dat)
+np.save("data/ppg_times",cut_ppg_times)
+np.save("data/ppg_dat",cut_ppg_dat)
 
 # #Plot 
 # ax = plt.subplot(2,1,1)
