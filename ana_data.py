@@ -39,9 +39,9 @@ def chop_data(data):
 
 
 #HRV data
-data = np.load("stat_data.npy")
+data = np.load("data/comp.npy")
 #RAW PPG date
-raw = np.load("data.npy")
+raw = np.load("data/raw.npy")
 
 
 #remove nan data from HRV
