@@ -25,7 +25,6 @@ def getpatid(filepath):
 store = []
 #This is the name you change
 filepath = 'raw.csv'
-outputpath = "raw"
 #length of file
 lenoffil = lengthoffile(filepath)
 #tsUnixNano, accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z,ir,red,ir_filt,red_filt
@@ -43,6 +42,6 @@ for i,line in enumerate(f):
 f.close()
 
 out = np.array(store)
-np.save(outputpath, out)
+np.save("data/raw", out)
 np.save("data/raw_name", names)
 
